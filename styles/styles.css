@@ -295,6 +295,10 @@ textarea::placeholder {
   min-height: 40px;
 }
 
+.asteriks {
+  color: red;
+}
+
 
 
 
@@ -377,6 +381,20 @@ textarea::placeholder {
 
 .figma {
   color: #fff;
+}
+
+.back-project {
+  padding: 10px;
+  background-color: #AE8B3D;
+  width: 100%;
+  max-width: 140px;
+  margin-left: 80px;
+  margin-bottom: 80px;
+}
+
+.back-project a {
+  text-decoration: none;
+  color: white;
 }
 
 
