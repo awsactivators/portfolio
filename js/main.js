@@ -5,13 +5,35 @@ function toggleMenu() {
   let name = document.getElementById("name");
   let menuIcon = document.getElementById("menu-icon");
 
+  let mainContent = document.getElementById("software-main");
+
   if (menu.classList.contains("show-small")) {
-    name.style.paddingTop = "150px";
+    // name.style.paddingTop = "150px";
+    // menuIcon.src = "./images/cancel.png";
+    if (name) {
+      name.style.paddingTop = "150px";
+    }
     menuIcon.src = "./images/cancel.png";
   } else {
-    name.style.paddingTop = "0px"; 
+    // name.style.paddingTop = "0px"; 
+    // menuIcon.src = "./images/menu.png";
+    if (name) {
+      name.style.paddingTop = "0px";
+    }
     menuIcon.src = "./images/menu.png";
   }
+
+  if (menu.classList.contains("show-small")) {
+    if (mainContent) {
+        mainContent.style.marginTop = "250px"; // Push down
+    }
+    menuIcon.src = "./images/cancel.png";
+  } else {
+    if (mainContent) {
+        mainContent.style.marginTop = "50px"; // Reset
+    }
+    menuIcon.src = "./images/menu.png";
+}
 }
 
 /* Skills Image slider*/
@@ -60,4 +82,3 @@ document.addEventListener("DOMContentLoaded", function () {
   // Listen for window resize to adjust the visible images dynamically
   window.addEventListener("resize", updateVisibleImages);
 });
-
