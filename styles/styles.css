@@ -397,6 +397,52 @@ textarea::placeholder {
   color: white;
 }
 
+.project-card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.project-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 400px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3 {
+  color: #fff;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.project-card a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
 
 
 /******************************************************************************/
@@ -656,6 +702,27 @@ textarea::placeholder {
     padding-left: 150px;
   }
 
+  .project-card-wrapper {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .project-card {
+    padding: 14px;
+  }
+
+  .project-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-card p {
+    font-size: 0.95rem;
+  }
+
+  .project-card a {
+    font-size: 0.9rem;
+  }
+
 }
 
 
@@ -907,6 +974,26 @@ textarea::placeholder {
 
   .footer-container .social-icons a {
     padding-right: 20px; 
+  }
+
+  .project-card-wrapper {
+    padding: 10px;
+  }
+
+  .project-card {
+    padding: 12px;
+  }
+
+  .project-card h3 {
+    font-size: 1rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+  }
+
+  .project-card a {
+    font-size: 0.85rem;
   }
 
 }
