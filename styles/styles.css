@@ -140,6 +140,118 @@ h1 {
   margin: 20px 0 0 80px;
 }
 
+.view-skills-btn {
+  margin-left: 80px;
+  margin-top: 5px;
+  
+}
+
+.view-skills-btn button {
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* Modal Styles */
+.skills-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
+  color: white;
+  border-radius: 10px;
+  max-width: 80%; /* Limit modal width */
+  max-height: 80%; /* Limit modal height */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+  padding: 20px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.skills-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.skills-modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.skills-modal-header .close-modal {
+  cursor: pointer;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+}
+
+/* Modal Container */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #1a1a1a;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  width: 80%; /* Ensure enough width for content */
+  max-width: 1200px; /* Limit modal width */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+  max-height: 90vh; /* Ensure content fits the viewport */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Close Button */
+.close-btn {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 25px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+/* Modal Skills Grid */
+.modal-skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Flexible columns */
+  gap: 15px;
+  margin-top: 20px;
+  justify-items: center;
+  align-items: center;
+  overflow-y: auto; /* Allow scrolling */
+}
+
+.modal-skills-container img {
+  max-width: 80px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
 
 
 /* Projects */
@@ -453,6 +565,13 @@ textarea::placeholder {
 /******************************************************************************/
 
 /* Desktop (default) - Display 5 images */
+@media (min-width: 1024px) {
+  .modal-skills-container {
+    grid-template-columns: repeat(7, 1fr); /* Exactly 7 images per row */
+  }
+}
+
+
 @media (min-width: 769px) {
   #skills-banner img {
     width: auto; 
@@ -482,6 +601,10 @@ textarea::placeholder {
 
   .project-summary p {
     max-width: 360px;
+  }
+
+  .modal-skills-container {
+    grid-template-columns: repeat(5, 1fr); /* 5 images per row */
   }
 }
 
@@ -728,6 +851,14 @@ textarea::placeholder {
 
   .project-card a {
     font-size: 0.9rem;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+
+  .modal-skills-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 images per row */
   }
 
 }
@@ -1001,6 +1132,14 @@ textarea::placeholder {
 
   .project-card a {
     font-size: 0.85rem;
+  }
+
+  .modal-content {
+    padding: 10px;
+  }
+
+  .modal-skills-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 images per row */
   }
 
 }

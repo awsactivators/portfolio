@@ -63,7 +63,14 @@
   
       <!-- Skills Start -->
       <div class="skills-container" id="skill">
-        <h2 class="h2-header" id="skill-header">SKILLS</h2>
+        <div class="skill-title-view">
+          <div>
+            <h2 class="h2-header" id="skill-header">SKILLS</h2>
+          </div>
+          <div class="view-skills-btn">
+            <button id="view-skills">View All Skills</button>
+          </div>
+        </div>
         <div id="skills-banner">
            <!-- Group 1 for Large Screens -->
           <img src="./images/skills-img/js.png" alt="Javascript image" data-group="1" data-cycle="1" class="image">
@@ -119,6 +126,7 @@
           <img src="./images/skills-img/wordpress.png" alt="Javascript image" data-group="1" data-cycle="1" class="image">
           <img src="./images/skills-img/yaml.png" alt="HTML5 image" data-group="1" data-cycle="1" class="image">
         </div>
+
       </div>
       <!-- Skills End -->
   
@@ -217,6 +225,68 @@
         </div>
       </div>
     </footer>
+  </div>
+
+  <!-- Modal for All Skills -->
+  <div id="skills-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="close-modal">&times;</span>
+      <h2>All Skills</h2>
+      <div class="modal-skills-container" id="modal-skills-container">
+        <img src="./images/skills-img/js.png" alt="Javascript image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/html5.png" alt="HTML5 image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/cs.png" alt="C sharp image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/nodejs.png" alt="Nodejs image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/python.png" alt="Python image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/aws.png" alt="Javascript image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/gcp.png" alt="HTML5 image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/css.png" alt="C sharp image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/apache.png" alt="Nodejs image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/amplify.png" alt="Python image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/bitbucket.png" alt="Javascript image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/bootstrap.png" alt="HTML5 image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/curl.png" alt="C sharp image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/docker.png" alt="Nodejs image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/firebase.png" alt="Python image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/firestore.png" alt="Javascript image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/ghactions.png" alt="HTML5 image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/git.png" alt="C sharp image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/github.png" alt="Nodejs image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/gitlab.png" alt="Python image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/grafana.png" alt="Javascript image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/helm.png" alt="HTML5 image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/homebrew.png" alt="C sharp image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/jasmine.png" alt="Nodejs image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/jenkins.png" alt="Python image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/joomla.png" alt="Javascript image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/jquery.png" alt="HTML5 image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/json.png" alt="C sharp image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/k8s.png" alt="Nodejs image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/kafka.png" alt="Python image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/linux.png" alt="Javascript image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/mariadb.png" alt="HTML5 image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/mysql.png" alt="C sharp image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/nginx.png" alt="Nodejs image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/npm.png" alt="Python image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/opensource.png" alt="Javascript image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/php.png" alt="HTML5 image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/postgresql.png" alt="C sharp image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/postman.png" alt="Nodejs image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/pr.png" alt="Python image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/prometheus.png" alt="Javascript image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/pypi.png" alt="HTML5 image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/react.png" alt="C sharp image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/redis.png" alt="Nodejs image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/sass.png" alt="Python image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/terraform.png" alt="Javascript image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/tomcat.png" alt="HTML5 image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/typescript.png" alt="C sharp image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/vs.png" alt="Nodejs image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/vscode.png" alt="Python image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/wordpress.png" alt="Javascript image" data-group="1" data-cycle="1" class="image">
+        <img src="./images/skills-img/yaml.png" alt="HTML5 image" data-group="1" data-cycle="1" class="image">
+      </div>
+    </div>
   </div>
 </body>
 </html>
