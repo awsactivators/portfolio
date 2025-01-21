@@ -399,7 +399,7 @@ textarea::placeholder {
 
 .project-card-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
   padding: 20px;
 }
@@ -411,7 +411,12 @@ textarea::placeholder {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   padding: 16px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 400px;
+  max-width: 350px;
+  min-width: 280px; /* Matches grid min size */
+  min-height: 200px; /* Prevent collapsing */
+  display: flex;
+  flex-direction: column; /* Ensure content stacks vertically */
+  justify-content: space-between;
 }
 
 .project-card:hover {
@@ -705,10 +710,12 @@ textarea::placeholder {
   .project-card-wrapper {
     grid-template-columns: 1fr;
     gap: 15px;
+    padding: 10px;
   }
 
   .project-card {
     padding: 14px;
+    min-width: 100%;
   }
 
   .project-card h3 {
