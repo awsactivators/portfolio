@@ -103,6 +103,9 @@ h1 {
 
 .resume-btn {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
 }
 
 .resume {
@@ -997,6 +1000,11 @@ textarea::placeholder {
     text-align: center;
   }
 
+  .resume-btn {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
 }
 
 
@@ -1173,6 +1181,12 @@ textarea::placeholder {
   }
 }
 
+@media (max-width: 430px) {
+  #about-me {
+    height: 740px;
+  }
+}
+
 
 
 /* Tablet (max-width: 412px) */
@@ -1205,16 +1219,18 @@ textarea::placeholder {
 
 
 
+
 /* Tablet (max-width: 390px) */
-@media (max-width: 390px) {
+@media screen and (max-width: 390px) {
+
   main, .container, body, html {
     max-width: 360px;
     overflow-x: hidden;
   }
 
   #about-me {
-    width: 360px;
-    height: 900px;
+    /* width: 360px; */
+    height: 1000px;
   }
   
   .name {
@@ -1251,9 +1267,6 @@ textarea::placeholder {
 
 /* Tablet (max-width: 375px) */
 @media (max-width: 375px) {
-  #about-me {
-    height: 800px;
-  }
 
   .skills-container h2 {
     margin-left: 40px;
@@ -1276,13 +1289,6 @@ textarea::placeholder {
 
   .contact-container h2 {
     padding-left: 0px;
-  }
-}
-
-
-@media (max-width: 360px) {
-  #about-me {
-    height: 900px;
   }
 }
 
@@ -1358,10 +1364,6 @@ textarea::placeholder {
   
   .menu-toggle {
     display:block;
-  }
-
-  #about-me {
-    height: 890px; 
   }
 
   .summary {
