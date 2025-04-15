@@ -318,6 +318,31 @@ div.project-detail {
 }
 
 
+/* Paignation  */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  border: 1px solid #ae8b3d;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover,
+.pagination button.active {
+  background-color: #ae8b3d;
+  color: white;
+}
+
+
 
 /* Contact */
 #contact {

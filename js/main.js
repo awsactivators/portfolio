@@ -139,3 +139,56 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+
+// Paignation function
+document.addEventListener("DOMContentLoaded", () => {
+  const cardsPerPage = 4;
+  const cards = Array.from(document.querySelectorAll(".project-card"));
+  const pagination = document.getElementById("pagination");
+
+  let currentPage = 1;
+  const totalPages = Math.ceil(cards.length / cardsPerPage);
+
+  function displayPage(page) {
+    const start = (page - 1) * cardsPerPage;
+    const end = start + cardsPerPage;
+
+    cards.forEach((card, index) => {
+      card.style.display = index >= start && index < end ? "block" : "none";
+    });
+
+    renderPaginationButtons(page);
+  }
+
+  function renderPaginationButtons(current) {
+    pagination.innerHTML = "";
+
+    if (totalPages <= 1) return;
+
+    if (current > 1) {
+      const prevBtn = document.createElement("button");
+      prevBtn.innerText = "Prev";
+      prevBtn.onclick = () => displayPage(current - 1);
+      pagination.appendChild(prevBtn);
+    }
+
+    for (let i = 1; i <= totalPages; i++) {
+      const btn = document.createElement("button");
+      btn.innerText = i;
+      if (i === current) btn.classList.add("active");
+      btn.onclick = () => displayPage(i);
+      pagination.appendChild(btn);
+    }
+
+    if (current < totalPages) {
+      const nextBtn = document.createElement("button");
+      nextBtn.innerText = "Next";
+      nextBtn.onclick = () => displayPage(current + 1);
+      pagination.appendChild(nextBtn);
+    }
+  }
+
+  displayPage(currentPage);
+});
